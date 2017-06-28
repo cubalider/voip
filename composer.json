@@ -1,0 +1,37 @@
+{
+    "name": "yosmy/voip",
+    "description": "",
+    "require": {
+        "php": ">=7.2",
+        "ext-mongodb": "*",
+        "ext-json": "*",
+        "mongodb/mongodb": "^1.1",
+        "fabpot/goutte": "^3.2",
+        "yosmy/phone": "@dev",
+        "yosmy/country": "@dev",
+        "yosmy/faker": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yosmy\\Voip\\": [
+                "src/call",
+                "src/connection",
+                "src/provider",
+                "src/rate"
+            ],
+            "Yosmy\\Voip\\Dev\\": [
+                "dev/connection",
+                "dev/provider",
+                "dev/rate"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://php.yosmy.com"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
